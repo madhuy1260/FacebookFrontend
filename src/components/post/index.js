@@ -23,6 +23,7 @@ export default function Post({ post, user, profile }) {
 
   useEffect(() => {
     getPostReacts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [post]);
 
   useEffect(() => {
@@ -44,15 +45,15 @@ export default function Post({ post, user, profile }) {
     reactPost(post._id, type, user.token);
     if (check === type) {
       setCheck();
-      let index = reacts.findIndex((x) => x.react == check);
+      let index = reacts.findIndex((x) => x.react === check);
       if (index !== -1) {
         setReacts([...reacts, (reacts[index].count = --reacts[index].count)]);
         setTotal((prev) => --prev);
       }
     } else {
       setCheck(type);
-      let index = reacts.findIndex((x) => x.react == type);
-      let index1 = reacts.findIndex((x) => x.react == check);
+      let index = reacts.findIndex((x) => x.react === type);
+      let index1 = reacts.findIndex((x) => x.react === check);
       if (index !== -1) {
         setReacts([...reacts, (reacts[index].count = ++reacts[index].count)]);
         setTotal((prev) => ++prev);

@@ -10,9 +10,9 @@ import {
 export default function Card({ userr, type, getData }) {
   const { user } = useSelector((state) => ({ ...state }));
   const cancelRequestHandler = async (userId) => {
-    const resp = await cancelRequest(userId, user.token);
+    await cancelRequest(userId, user.token);
     getData();
-    if (Response == "Okay") {
+    if (Response === "Okay") {
       getData();
     }
   };
@@ -20,7 +20,7 @@ export default function Card({ userr, type, getData }) {
   const confirmHandler = async (userId) => {
     const resp = await acceptRequest(userId, user.token);
     getData();
-    if (resp == "Okay") {
+    if (resp === "Okay") {
       getData();
     }
   };
@@ -28,7 +28,7 @@ export default function Card({ userr, type, getData }) {
   const deleteHandler = async (userId) => {
     const resp = await deleteRequest(userId, user.token);
     getData();
-    if (resp == "Okay") {
+    if (resp === "Okay") {
       getData();
     }
   };

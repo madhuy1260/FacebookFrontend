@@ -26,7 +26,7 @@ export const createPost = async (
 
 export const reactPost = async (postId, react, token) => {
   try {
-    const { data } = await axios.put(
+    await axios.put(
       `${process.env.REACT_APP_BACKEND_URL}/reactPost`,
       { postId, react },
       {

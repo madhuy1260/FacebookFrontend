@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 
 const reactsArray = [
   { name: "like", image: "../../../reacts/like.gif" },

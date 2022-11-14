@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login.js";
 import Profile from "./pages/Profile/Profile.js";
@@ -16,10 +17,9 @@ import Friends from "./pages/friends/index.js";
 function App() {
   const [createPostVisible, setCreatePostVisible] = useState(false);
   const { user, darkTheme } = useSelector((state) => ({ ...state }));
-  const [{ loading, error, posts }, dispatch] = useReducer(postsReducer, {
+  const [{ loading, posts }, dispatch] = useReducer(postsReducer, {
     loading: false,
     posts: [],
-    error: "",
   });
 
   useEffect(() => {

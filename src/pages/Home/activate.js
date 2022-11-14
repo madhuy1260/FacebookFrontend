@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Home.css";
 import axios from "axios";
 import Header from "../../components/header/Header";
@@ -21,6 +21,7 @@ function Activate() {
   const { token } = useParams();
   useEffect(() => {
     activateAccount();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const activateAccount = async () => {

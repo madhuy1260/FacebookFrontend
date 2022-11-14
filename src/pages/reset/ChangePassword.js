@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form } from "formik";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginInput from "../../components/inputs/loginInput";
 import * as Yup from "yup";
 import axios from "axios";

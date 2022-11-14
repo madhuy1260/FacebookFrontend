@@ -61,7 +61,7 @@ export default function UpdateProfilePicture({
         console.log(err);
       }
     },
-    [croppedAreaPixels]
+    [croppedAreaPixels, image, setImage]
   );
 
   const updateProfilePicture = async () => {

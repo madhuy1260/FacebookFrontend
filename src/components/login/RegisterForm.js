@@ -1,4 +1,4 @@
-import { Form, Formik, Field } from "formik";
+import { Form, Formik } from "formik";
 import { useState } from "react";
 import RegisterInput from "../inputs/registerInput";
 import * as Yup from "yup";

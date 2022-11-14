@@ -1,6 +1,4 @@
-import React, { useEffect, useReducer } from "react";
-import { photosReducer } from "../../functions/reducers";
-import axios from "axios";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Friends({ friends }) {

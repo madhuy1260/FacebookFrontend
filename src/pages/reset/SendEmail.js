@@ -1,6 +1,4 @@
 import React from "react";
-import { Formik, Form } from "formik";
-import LoginInput from "../../components/inputs/loginInput";
 import { Link } from "react-router-dom";
 import axios from "axios";
 

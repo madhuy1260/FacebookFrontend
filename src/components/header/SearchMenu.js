@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Return, Search } from "../../svg";
 import { useRef, useState, useEffect } from "react";
 import ClickOutside from "../../helpers/clickOutside";
@@ -48,7 +50,7 @@ function SearchMenu({ color, setShowSearchMenu, token }) {
   // console.log(searchHistory);
 
   const addToSearchHistoryHandler = async (searchUser) => {
-    const res = await addToSearchHistory(searchUser, token);
+    await addToSearchHistory(searchUser, token);
     getHistory();
   };
 
@@ -97,7 +99,7 @@ function SearchMenu({ color, setShowSearchMenu, token }) {
           />
         </div>
       </div>
-      {results == "" && (
+      {results === "" && (
         <div className="search_history_header">
           <span>Recent searches</span>
           <a href="">Edit</a>
@@ -105,7 +107,7 @@ function SearchMenu({ color, setShowSearchMenu, token }) {
       )}
       <div className="search_history scrollbar">
         {searchHistory &&
-          results == "" &&
+          results === "" &&
           searchHistory
             .sort((a, b) => {
               return new Date(b.createdAt) - new Date(a.createdAt);

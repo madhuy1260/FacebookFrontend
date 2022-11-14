@@ -1,6 +1,4 @@
-import React, { useEffect, useReducer } from "react";
-import { photosReducer } from "../../functions/reducers";
-import axios from "axios";
+import React from "react";
 
 export default function Photos({ username, token, photos }) {
   // const [{ loading, error, photos }, dispatch] = useReducer(photosReducer, {

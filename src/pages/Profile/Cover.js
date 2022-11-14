@@ -84,6 +84,7 @@ export default function Cover({ cover, visitor, photos }) {
         console.log(err);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [croppedAreaPixels]
   );
 
@@ -92,6 +93,7 @@ export default function Cover({ cover, visitor, photos }) {
 
   useEffect(() => {
     setWidth(coverRef.current.clientWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [window.innerWidth]);
 
   const updateCoverPicture = async () => {

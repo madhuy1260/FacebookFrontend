@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import Intro from "../../components/intro";
 import { useMediaQuery } from "react-responsive";
 import CreatePostPopup from "../../components/createPostPopup";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { HashLoader, PropagateLoader } from "react-spinners";
 
@@ -31,14 +31,14 @@ function Profile({ getAllPosts }) {
   var userName = username === undefined ? user.username : username;
   // console.log(userName);
 
-  const [{ loading, error, profile }, dispatch] = useReducer(profileReducer, {
+  const [{ loading, profile }, dispatch] = useReducer(profileReducer, {
     loading: false,
     profile: {},
-    error: "",
   });
 
   useEffect(() => {
     getProfile();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userName]);
 
   useEffect(() => {

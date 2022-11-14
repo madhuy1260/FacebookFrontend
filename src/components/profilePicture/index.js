@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import "./styles.css";
 import { useSelector } from "react-redux";
 import UpdateProfilePicture from "./UpdateProfilePicture";
-import ClickOutside from "../../helpers/clickOutside";
 
 export default function ProfilePicture({ setShow, pRef, photos }) {
   const { user } = useSelector((state) => ({ ...state }));

@@ -139,6 +139,7 @@ export default function Intro({ detailss, visitor, setOthername }) {
         <div className="info_profile">
           <img src="../../../icons/instagram.png" alt="" />
           <a
+            rel="noreferrer"
             href={`http://instagram.com/${details?.instagram}`}
             target="_blank"
           >
